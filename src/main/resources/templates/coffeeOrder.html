@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>COFFEE MANAGEMENT SYSTEM </title>
+	    <link rel="stylesheet" 
+		href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+		crossorigin="anonymous">
+		
+		<style>
+			table{
+				min-width: max-content;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Coffee Management System</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/CoffeeOrder/new}">Coffee Management System</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+		 <div class="container-fluid">
+			 
+			 <div class = "row py-3 align-items-end"> 
+				 <h1 class="col"> List Of orders </h1>
+				 <div class = "col-auto">
+					<a th:href = "@{/CoffeeOrder/new}" class = "btn btn-primary"> Add Order</a>
+					
+				</div>
+			 </div>
+			 
+			 <div class="table-responsive">
+				 <table class = "table table-dark table-bordered"> 
+				 <thead>
+					 <tr>
+						 
+						 <th> Company Name</th>
+						 <th> Order Approver</th>
+						 <th> Order Date</th>
+						 <th> Quantity</th>
+						 <th> Price</th>
+						 <th> Imports</th>
+						 <th> Exports </th>
+						 <th> Actions</th>
+					 </tr>
+				 </thead>
+				 <tbody>
+					 <tr th:each = "coffeeOrder : ${CoffeeOrders}">
+					<td th:text = "${coffeeOrder.name}"></td>
+					<td th:text = "${coffeeOrder.orderer}"></td>
+					<td th:text = "${coffeeOrder.date}"></td> 
+					<td th:text = "${coffeeOrder.quantity}"></td> 
+					<td th:text = "${coffeeOrder.price}"></td> 
+					<td th:text = "${coffeeOrder.exports_mports}"></td> 
+					<td th:text = "${coffeeOrder.exports_mports"></td>
+					 
+					<td>
+					
+						<a th:href = "@{/coffeeOrder/edit/{id}(id=${CoffeeOrder.id})}"
+						 class = "btn btn-primary">Update</a>
+						
+						<a th:href = "@{/coffeeOrder/{id}(id=${CoffeeOrder.id})}"
+						 class = "btn btn-danger">Delete</a>
+					</td>
+					
+					 </tr>
+				 </tbody>
+				 
+			 </table>
+			 </div>
+		 </div>
+		
+	</body>
+</html>
