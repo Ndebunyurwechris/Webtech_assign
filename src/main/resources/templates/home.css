@@ -1,0 +1,85 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('coffe.jpg');
+
+  }
+  
+  /* Header styles */
+  header {
+    background-color: rgba(95, 21, 21, 0.65);
+    padding: 20px;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+
+  }
+  
+  /* Main styles */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 150px 200px;
+  }
+  
+  /* Login section styles */
+  #login {
+    background-color: rgba(255,255,255,0.75);
+    padding: 20px;
+    border-radius: 20px;
+    color: rgb(7, 7, 7);
+    
+  }
+  
+  #login h2 {
+    margin-bottom: 10px;
+  }
+  
+  #login form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #login label {
+    margin-bottom: 5px;
+  }
+  
+  #login input[type="email"],
+  #login input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #login input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    max-width: 80px;
+    justify-content: end;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+
+  }
+  
+  /* Footer styles
+  footer {
+    background-color: transparent;
+    color: #070707;
+    text-align: start;
+    display: flex;
+    align-items: start;
+    padding: 300px 10px ;
+    justify-content: start;
+    height: 80px;
+  } */
+  
