@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SignUp Form</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" th:href="@{home.css}" />
     <!-- Font Awesome Cdn Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
@@ -30,6 +30,8 @@
         <button type="submit">Sign Up</button>
     </form>
 
-    
+    <div class="not-member">
+        have an account? <a th:href="@{/admins/login}">Log In!</a>
+    </div>
 </body>
 </html>
