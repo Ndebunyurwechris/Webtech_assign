@@ -10,12 +10,19 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/admins")
+
 public class AdminController {
     private AdminRepository adminRepository;
     @Autowired
     public AdminController(AdminRepository adminRepository) {
         this.adminRepository = adminRepository;
+    }
+    @RequestMapping("/admins")
+    public String home(){
+        // create Model attribute to bind form data
+//        Admin admin = new Admin();
+//        theModel.addAttribute("admin", admin);
+        return "home.html";
     }
 
     @GetMapping("/SignUp")
