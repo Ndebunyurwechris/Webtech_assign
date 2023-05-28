@@ -17,7 +17,7 @@ public class AdminController {
     public AdminController(AdminRepository adminRepository) {
         this.adminRepository = adminRepository;
     }
-    @RequestMapping("/admins")
+    @RequestMapping("/")
     public String home(){
         // create Model attribute to bind form data
 //        Admin admin = new Admin();
@@ -45,7 +45,7 @@ public class AdminController {
     public String saveAdmin(@ModelAttribute("admin") Admin theAdmin){
         // save the Admin
         adminRepository.save(theAdmin);
-        return "redirect:/admins/SignUp";
+        return "redirect:/login";
     }
 
     @PostMapping("/authenticate")
@@ -56,6 +56,6 @@ public class AdminController {
         if(!authAdmin.isEmpty()){
             return "coffeeOrder";
         }
-        return "redirect:/admins/SignUp";
+        return "redirect:/SignUp";
     }
 }

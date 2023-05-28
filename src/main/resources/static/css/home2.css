@@ -1,0 +1,63 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+    background-image: url('coffe2.jpg');
+    
+
+  }
+  
+  /* Header styles */
+  header {
+    background-color: rgba(51, 46, 46, 0.5);
+    background-size: 2px;
+    padding: 20px;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+    
+
+  }
+  .space button{
+    margin-top: 100px;
+    border: none;
+    height: 50px;
+    width: 100px;
+    border-radius: 12px;
+    background-color: rgba(250, 247, 247, 0.9);
+  }
+  .space{
+    background-color: rgba(51, 46, 46, 0.15);
+    height: 600px;
+    justify-content: center;
+    padding-top: 100px;
+    color: azure;
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  /* Main styles */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 150px 200px;
+  }
+  footer {
+    background-color: rgba(255,255,255,0.5);
+    padding: 10px;
+    text-align: start;
+    height: 90px;
+    align-items: end;
+    display: flex;
+
+  }
+
+  
+ 
+  

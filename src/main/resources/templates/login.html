@@ -1,45 +1,37 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>SignUp Form</title>
-    <link rel="stylesheet" th:href="@{/css/home.css}" />
-   
+  <title>Sign In</title>
+  <link rel="stylesheet" type="text/css" href="../css/home.css">
+  <a href="#"></a>
 </head>
 <body>
-<div class="wrapper">
-    <h1>Log In</h1>
-    <!--    <p>Welcome back you've <br> been missed!</p>-->
-    <form action="#" th:action="@{/admins/authenticate}"
-          th:object="${admin}" method="post">
+  <header>
+    <h1>Coffee Management</h1>
+  </header>
 
-        <!--        <input type="text" placeholder="Enter username">-->
-        <!--        <input type="password" placeholder="Password">-->
-
-        <input type="hidden" th:field="*{id}">
-        <input type="text" th:field="*{email}"
+  <main>
+    <section id="login">
+      <h2>LOG IN</h2>
+      <form action="#" th:action="@{/authenticate}" th:object="${admin}" method="post">
+		  <input type="hidden" th:field="*{id}">
+        <label for="email">Email:</label>
+        <input type="email" th:field="*{email}"
                placeholder="email">
+
+        <label for="password">Password:</label>
         <input type="password" th:field="*{password}"
                placeholder="password">
-        <p class="recover">
+		<p class="recover">
             <a href="#">Recover Password</a>
         </p>
-        <!--        <closeform></closeform>-->
-        <button type="submit">Log In</button>
-    </form>
-
-    <p class="or">
-        ----- or continue with -----
-    </p>
-    <div class="icons">
-        <i class="fab fa-google"></i>
-        <i class="fab fa-github"></i>
-        <i class="fab fa-facebook"></i>
-    </div>
-    <div class="not-member">
+        <input type="submit" value="Login">
+       
+      </form>
+      <div class="not-member">
         Not a member? <a href="SignUp">Register Now</a>
     </div>
-</div>
-</body>
-</html>
+    </section>
+  </main>
+  
+ 
